@@ -102,7 +102,7 @@ class _CallState extends State<Call> {
           Align(
             alignment: Alignment.topCenter,
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 40 , horizontal: 40),
+              padding: EdgeInsets.symmetric(vertical: 60 , horizontal: 40),
               child: Column(
                 children: [
                   CircleAvatar(
@@ -126,29 +126,32 @@ class _CallState extends State<Call> {
             bottom: 50,
             left: 0,
             right: 0,
-
-            child: Column(
-
-              children: [
-                Text("Swipe up to answer call",style: callTextStyle
-                ),
-                SizedBox(height: 14,),
-                InkWell(
-                  onTap: (){
-                    _clickAndSaveImage();
-                  },
-                  child: Icon(Icons.camera),
-                ),
-                SizedBox(height: 14,),
-                InkWell(
-                  onTap: (){
-                    Navigator.pop(context);
-                  },
-                  child: Text("Swipe down to decline call",style: callTextStyle
-                  ),
-                )
-              ],
+            child: FloatingActionButton(
+              child: Icon(Icons.camera),
             ),
+
+            // child: Column(
+            //
+            //   children: [
+            //     Text("Swipe up to answer call",style: callTextStyle
+            //     ),
+            //     SizedBox(height: 14,),
+            //     InkWell(
+            //       onTap: (){
+            //         _clickAndSaveImage();
+            //       },
+            //       child: Icon(Icons.camera),
+            //     ),
+            //     SizedBox(height: 14,),
+            //     InkWell(
+            //       onTap: (){
+            //         Navigator.pop(context);
+            //       },
+            //       child: Text("Swipe down to decline call",style: callTextStyle
+            //       ),
+            //     )
+            //   ],
+            // ),
           ),
 
         ],
